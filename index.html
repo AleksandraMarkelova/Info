@@ -2,6 +2,12 @@
 <html lang="ru">
 
 <head>
+    <meta property="og:title" content="Александра Маркелова"> <!--ЗАголовок ссылки-->
+    <meta property="og:description" content="Web - разработчик"> <!--Описание ссылки-->
+    <meta property="og:image" content="https://teachalexit.github.io/manuals/frontend/f2img/header__foto.png">
+    <meta property="og:url" content="https://aleksandramarkelova.github.io/Info/">
+    <meta property="og:type" content="website">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -39,7 +45,7 @@
                     <a href="https://vk.com/id780037997" class="vk" target="_blank">
                         <i class="fa-brands fa-vk"></i>
                     </a>
-                
+
                 </div>
                 <button class="hamburger">
                     <span></span>
@@ -168,16 +174,21 @@
             <div class="contact__elements">
                 <h3>Оставьте заявку и я свяжусь с вами в течении дня!</h3>
                 <hr>
-                <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScr4ZY8ruS80x2RBZjwq-K3IZv8tODmqcjpC9FrIMdV4l91IA/formResponse" target="form-set" method="post"> <!--метод пост для открытия вкладки в новом окне ТОЛЬКО ДЛЯ ФОРМЫ-->
+                <form
+                    action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScr4ZY8ruS80x2RBZjwq-K3IZv8tODmqcjpC9FrIMdV4l91IA/formResponse"
+                    target="form-set" method="post">
+                    <!--метод пост для открытия вкладки в новом окне ТОЛЬКО ДЛЯ ФОРМЫ-->
                     <iframe name="form-set"></iframe>
                     <div class="form-wrapper">
                         Ваша заявка отправлена.
                     </div>
 
                     <label for="name">Ваше имя</label>
-                    <input id="name" class="name" type="text" name="entry.1627923458" placeholder="Введите имя" required>
+                    <input id="name" class="name" type="text" name="entry.1627923458" placeholder="Введите имя"
+                        required>
                     <label for="email">Ваша почта</label>
-                    <input id="email" class="email" type="email" name="entry.1035916551" placeholder="Введите почту" required>
+                    <input id="email" class="email" type="email" name="entry.1035916551" placeholder="Введите почту"
+                        required>
                     <label for="comment">Комментарий</label>
                     <textarea id="comment" name="entry.1596664324" placeholder="Комментарий"></textarea>
 
@@ -207,4 +218,5 @@
         </div>
     </footer>
 </body>
+
 </html>
