@@ -8,6 +8,8 @@ const navLinksAll = document.querySelectorAll(".nav__links a");
 const formWrapper = document.querySelector(".form-wrapper");
 const iframe = document.querySelector("iframe");
 
+const tokenTg = "7410894748:AAFjFIfnmjYzpqMCw6PDJ7v92X5ISO1QsQQ";
+
 //функции, которые выполняются при нажатии
 hamburger.onclick = function () {
     hamburger.classList.toggle("hamburger_active"); //смена класса
@@ -33,7 +35,32 @@ for (let i = 0; i < 4; i++) {
 iframe.onload = function () {
     formWrapper.classList.add("form-wrapper_active");
     setTimeout(() => {
+        const name = document.querySelector("#name").value;
+        const email = document.querySelector("#email").value;
+        const comment = document.querySelector("#comment").value;
+
         document.querySelector("form").reset();
         formWrapper.classList.remove("form-wrapper_active");
+
+        const massageText = `Новая заявка с сайта!😎\nИмя: ${name}\nПочта: ${email}\nКомментарий: ${comment}`;
+        const url = `https://api.telegram.org/bot${tokenTg}/sendMessage`;
+        console.log(url);
+        
+        const params = {
+            chat_id: "5936580666",
+            text: massageText,
+        }
+
+        axios.post(url, params) // .post(куда, что)
+            .then(response => {
+                console.log("Успешно!");
+            })
+            .catch(error => {
+                console.log("Ошибка :(");
+            })
+            return false
+            // Return false - чтобы страничка не перезагружалась
     }, 3000); //3000 = 3s
 }
+
+
